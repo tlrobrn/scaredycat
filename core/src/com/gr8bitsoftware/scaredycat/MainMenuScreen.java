@@ -6,6 +6,8 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import static com.gr8bitsoftware.scaredycat.ScaredyCatGame.camera;
+
 /**
  * Created by Alan on 3/15/2015.
  */
@@ -29,8 +31,8 @@ public class MainMenuScreen implements Screen{
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0.2f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        game.camera.update();
-        batch.setProjectionMatrix(game.camera.combined);
+        camera.update();
+        batch.setProjectionMatrix(camera.combined);
         batch.begin();
 
         font.draw(batch, "Scaredy Cat", 100,150);
