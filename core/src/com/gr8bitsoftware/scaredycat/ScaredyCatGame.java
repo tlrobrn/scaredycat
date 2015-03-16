@@ -9,7 +9,7 @@ public class ScaredyCatGame extends Game {
 	public void create() {
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, 800, 480);
-		this.setScreen(MainMenuScreen(this));
+		this.setScreen(new MainMenuScreen(this));
 	}
 
 	@Override
